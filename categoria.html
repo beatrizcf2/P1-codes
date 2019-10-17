@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>FabLab</title>
+  <link href="https://fonts.googleapis.com/css?family=Hepta+Slab|Lato|Questrial|Yrsa:700&display=swap" rel="stylesheet">
+  <link href="assets/css/reset.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script src= "assets/jv/categoria.js"></script>
+  <script src= "assets/jv/codes.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body class="body">
+  <header class="header">
+    Meu Portfólio
+  </header>
+
+  <nav class="nav">
+    <div class="portfolio">
+      <a href="index.html">
+        <img class="logo" src="assets/img/meuportifolio.png" alt="logo do portfólio">
+      </a>
+    </div>
+    <ul class="main-menu">
+      {{#each Portifolio}} 
+        <li class="main-menu-item"><a href="categoria.html?key={{@key}}">{{this.categoria}}</a></li>
+      {{/each}}
+    </ul>
+  </nav>
+
+  <main class="main">
+    <div class="category"> 
+      <p class="category-title"> 
+        Meus Projetos
+      </p>
+        <p class = "category-text"> 
+            {{categoria}}
+        </p>
+          
+    </div>
+    <div class="itens-categoria"> 
+      <ul class="projects-menu"> 
+        {{#each projetos}}
+        <li class="projects-menu-item"> 
+           
+            <a class = "link" href="projeto.html?key={{@key}}">
+              <img class="projects-menu-item-image" src="assets/img/{{@key}}.jpeg" alt={{@key}}> 
+            </a>
+            <div class="projects-menu-item-text"> 
+            
+            
+              <p class="descricao-categoria">
+                {{this.descricao}}
+              </p>
+            </div>
+          
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </main>
+
+  <aside class="aside">
+    <div>
+      <img class="foto-perfil" src="assets/img/cacau.jpg" alt="foto de perfil">
+    </div>
+    <h1 class="texto-perfil-titulo">Quem sou eu?</h1>
+    <p class="texto-perfil">
+      Aluna de Engenharia do insper, 8° semestre
+    </p>
+  </aside> 
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Portfólio de Projetos</title>
+  <link href="https://fonts.googleapis.com/css?family=Hepta+Slab|Lato|Questrial|Yrsa:700&display=swap" rel="stylesheet">
+  <link href="assets/css/reset.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script src= "assets/jv/codes.js"></script>
+  <script src= "assets/jv/index.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body class="body">
+  <header class="header">
+    Meu Portfólio
+  </header>
+
+  <nav class="nav"> 
+    <div class="portfolio">
+      <a href="index.html">
+        <img class="logo" src="assets/img/meuportifolio.png" alt="logo do portfólio">
+      </a>
+    </div>
+    {{#each portfolio}}
+    <ul class="main-menu"> 
+        <li class="main-menu-item"><a href="categoria.html?key={{@key}}">{{this.categoria}}</a></li>
+    </ul>
+    {{/each}}
+  </nav>
+
+  <main class="main">
+    <section class="index-title">
+      <p class="para-index">
+        Veja aqui os projetos feitos ao longo dos semestre do curso de Engenharia
+      </p>
+    </section>
+
+    <section class="index-texto">
+      <ul class="sections-menu">
+        {{#each portfolio}}
+        <li class="sections-menu-item">
+            <a href="categoria.html?key={{@key}}">
+              <img class="sections-menu-item-image" src="assets/img/{{@key}}.jpeg" alt={{@key}}>
+            </a>
+            <div class="sections-menu-item-text">
+              <p>
+                <a class="sections-menu-item-text-title" href="categoria.html?key={{@key}}">{{this.categoria}}</a>
+              </p>
+              <p class="texto">
+                {{this.descricao}}
+              </p>
+            </div>
+        </li>
+        {{/each}}
+      </ul>
+    </section>
+  </main>
+
+  <aside class="aside">
+    <div>
+      <img class="foto-perfil" src="assets/img/cacau.jpg" alt="foto de perfil">
+    </div>
+    <h1 class="texto-perfil-titulo">Quem sou eu?</h1>
+    <p class="texto-perfil">
+      Aluna de Engenharia do insper, 8° semestre
+    </p>
+  </aside>
+</body>
+</html>

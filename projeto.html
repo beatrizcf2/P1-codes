@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Modelagem Física</title>
+  <link href="https://fonts.googleapis.com/css?family=Hepta+Slab|Lato|Questrial|Yrsa:700&display=swap" rel="stylesheet">
+  <link href="assets/css/reset.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script src= "assets/jv/codes.js"></script>
+  <script src= "assets/jv/projeto.js"></script>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body class="body">
+  <header class="header">
+  	Meu Portfólio
+  </header>
+
+  <nav class="nav">
+    <div class="portfolio">
+      <a href="index.html">
+        <img class="logo" src="assets/img/meuportifolio.png" alt="logo do portfólio">
+      </a>
+    </div>
+    <ul class="main-menu">
+      {{#each Portifolio}} 
+        <li class="main-menu-item"><a href="categoria.html?key={{@key}}">{{this.categoria}}</a></li>
+      {{/each}}
+    </ul>
+  </nav>
+
+  <main class="main">  
+      <h1 class="project-title">
+        {{titulo}}
+      </h1>
+    <div class="pai-project">
+      <div class="project-image-cont">
+          <img  class="project-image" src="assets/img/{{imagem}}.jpeg" alt="{{imagem}}">
+      </div >
+      <div class="config">
+        <section class="project-cont">
+          <div class="project-text">
+            <h2 class="destaque">
+              O que foi feito:
+            </h2>
+              <p class="corpo-texto">
+                {{feito}}
+              </p>
+            <h2 class="destaque">
+              Equipe:
+            </h2>
+              <p class="corpo-texto">
+                {{equipe}}
+              </p>
+            <h2 class="destaque">
+              Materiais:
+            </h2>
+              <p class="corpo-texto">
+                {{materiais}}
+              </p>
+            <h2 class="destaque">
+              Objetivos:
+            </h2>
+              <p class="corpo-texto">
+                {{objetivos}}
+              </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <aside class="aside">
+    <div>
+      <img class="foto-perfil" src="assets/img/cacau.jpg" alt="foto de perfil">
+    </div>
+    <h1 class="texto-perfil-titulo">Quem sou eu?</h1>
+    <p class="texto-perfil">
+      Aluna de Engenharia do insper, 8° semestre
+    </p>
+  </aside>
+</body>
+</html>

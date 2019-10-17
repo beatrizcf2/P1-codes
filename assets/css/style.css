@@ -1,0 +1,358 @@
+/* header + nav + main + aside */
+
+.body {
+  display: grid;
+  grid-template-columns: .75fr 5fr auto;
+  grid-template-rows: .5fr 1fr auto;
+  grid-gap: .5rem;
+}
+
+/*-----------------------*/
+
+.header {
+  font-family: Hepta Slab, Yrsa, serif;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: flex;
+  justify-content: center;
+  padding: .5rem;
+  background-color: #d1eef0;
+}
+
+/*-----------------------*/
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: #2dbfc9;
+}
+
+.logo {
+  width: 5rem;
+  border-radius: 5rem;
+}
+
+.main-menu {
+  font-family: Lato, Questrial, sans-serif;
+  font-size: 1rem;
+  display: flex;
+}
+
+.main-menu-item {
+  text-transform: uppercase;
+  padding: 2rem;
+}
+
+/*-----------------------*/
+
+.aside {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-color: #75dde1;
+}
+
+.foto-perfil {
+  padding: 1rem;
+  justify-content: center;
+  width: 75%;
+  border-radius: 10rem;
+}
+
+.texto-perfil-titulo {
+  font-family: Hepta Slab, Yrsa, serif;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: .5rem;
+}
+
+.texto-perfil {
+  font-family: Lato, Questrial, sans-serif;
+  font-size: 1rem;
+  padding: .5rem;
+}
+
+/*-----------------------*/
+
+.main {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  margin-left: .5rem;
+}
+
+.sections-menu-item-text {
+  display: flex;
+}
+
+/* index.html */
+
+.para-index {
+  font-family: Hepta Slab, Yrsa, serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sections-menu-item-image {
+  margin-left: 1rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: .5rem;
+}
+
+.sections-menu-item {
+  display: flex;
+}
+
+.sections-menu-item-text {
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+
+.index-texto {
+  font-size: 1rem;
+  display: flex;
+}
+
+.sections-menu {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: .2rem;
+}
+
+.sections-menu-item-text-title {
+  font-family: Hepta Slab, Yrsa, serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #d1eef0;
+}
+
+.texto {
+  font-family: Lato, Questrial,sans-serif;
+}
+
+/* categoria.html */
+
+
+.category {
+  padding: .5rem;
+  font-family: Hepta Slab, Yrsa, serif;
+}
+
+.category-title {
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.category-text {
+  font-size: 1.5rem;
+}
+
+.projects-menu {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: .2rem;
+  margin-left: .3rem;
+}
+
+.projects-menu-item-image {
+  width: 20rem;
+  height: 15rem;
+  border-radius: .5rem;
+
+}
+
+.projects-menu-item-title {
+  font-family: Hepta Slab, Yrsa, serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #d1eef0;
+}
+
+.projects-menu-item-text {
+  width: 20rem;
+}
+
+.descricao-categoria {
+  font-family: Lato, Questrial, sans-serif;
+}
+
+/* projeto.html */
+
+.project-title {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: Hepta Slab, Yrsa, serif;
+  padding: 1rem
+}
+
+.project-image {
+  width: 100%;
+  border-radius: .5rem
+}
+
+.pai-project {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.destaque {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: Lato, Questrial, serif;
+  text-transform: uppercase;
+  background-color: #d1eef0;
+  margin-bottom: .2rem;
+}
+
+.corpo-texto {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  font-family: Lato, Questrial, serif;
+  margin-bottom: 1.5rem;
+}
+
+/*Mobile*/
+
+@media (max-width: 376px) {
+
+  .body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: .5fr 1fr auto;
+    grid-gap: 0.2rem;
+  }
+
+  .header {
+    font-family: Hepta Slab, Yrsa, serif;
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    justify-content: center;
+    padding: .5rem;
+    background-color: #d1eef0;
+}
+
+  .main {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .nav {
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #2dbfc9;
+  }
+
+  .main-menu {
+    display: none;
+  }
+
+  .aside {
+    visibility: hidden;
+  }
+
+  .para-index {
+    font-size: 1.2rem;
+  }
+
+  .sections-menu-item-text-title {
+    margin-bottom: 1rem;
+  }
+
+  .category-title{
+    display: flex;
+    justify-content: center;
+    font-family: Hepta Slab, Yrsa, serif;
+    font-size: 2.7rem;
+    width: 100%;
+  }
+
+  .category-text {
+    margin-left: 1rem;
+    font-family: Hepta Slab, Yrsa, serif;
+    font-size: 1.15rem;
+  }
+
+  .projects-menu {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: .2rem;
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+  }
+
+  .projects-menu-item-image {
+    margin-bottom: 0.3rem;
+  }
+
+  .itens-categoria {
+    display: flex;
+    justify-content: center;
+  }
+
+  .descricao-categoria {
+    margin-bottom: 2rem;
+  }
+
+  .sections-menu {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: .2rem;
+  }
+
+  .pai-project {
+    display: block;
+  }
+
+  .corpo-texto {
+    margin-bottom: 2rem;
+  }
+
+  .project-image-cont {
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-image {
+    width: 95%;
+    margin-bottom: 0.75rem;
+  }
+
+  .destaque {
+    font-size: 1.4rem;
+  }
+
+  .corpo-texto {
+    font-size: 1.2rem;
+  }
+}
